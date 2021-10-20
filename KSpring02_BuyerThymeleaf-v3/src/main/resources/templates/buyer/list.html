@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko"
+      xmlns:th = "http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout"
 >
@@ -29,5 +30,13 @@
         </tr>
         </tbody>
     </table>
+    <div class="btn_box" ><button class="btn_insert">고객등록</button></div>
+    <script>
+    $(function(){
+        $("button.btn_insert").on("click",function(){
+            location.href = "/buyer/insert"
+        })
+    })
+    </script>
 </section>
 </html>

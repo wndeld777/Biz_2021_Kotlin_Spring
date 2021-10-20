@@ -1,8 +1,9 @@
 package com.callor.spring.controller
 
-import com.callor.spring.ConfigString
+import com.callor.spring.ConfigData
 import com.callor.spring.models.Buyer
 import com.callor.spring.service.BuyerService
+import com.callor.spring.service.impl.BuyerServiceImplV1
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -43,8 +44,8 @@ class HomeController {
     @RequestMapping(value=["/"],method=[RequestMethod.GET])
     fun home(model:Model) :String {
 
-        println( ConfigString.APP_NAME )
-        println( ConfigString.APP_VERSION )
+        println( ConfigData.APP_NAME )
+        println( ConfigData.APP_VERSION )
 
         val userList = bService.selectAll()
         // model.addAttribute("USERS",userList)
@@ -67,14 +68,7 @@ class HomeController {
     }
 
 
-    @RequestMapping(value=["/detail"],method=[RequestMethod.GET])
-    fun detail( model:Model, @RequestParam("userid") userid:String):String {
 
-        val buyer = bService.findById(userid)
-        model["BUYER"] = buyer
-        return "detail" // detail.html 을 열어라
-
-    }
 
 
 }
