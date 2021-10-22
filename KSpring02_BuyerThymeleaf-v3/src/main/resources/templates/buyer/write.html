@@ -5,17 +5,38 @@
 >
 
 <section layout:fragment="content" class="buyer_write">
-    <form method="POST">
-        <div><label>USER ID</label><input name="userid" placeholder="ID 를 입력해주세요"/></div>
-        <div><label>이름</label><input name="name" placeholder="이름을 입력해주세요"/></div>
-        <div><label>전화번호</label><input name="tel" placeholder="전화번호를 입력해주세요"/></div>
-        <div><label>주소</label><input name="addr" placeholder="주소를 입력해주세요"/></div>
-        <div><label>담당자명</label><input name="manager" placeholder="담장자명을 입력해주세요"/></div>
-        <div><label>담장자 연락처</label><input name="man-tel" placeholder="담장자연락처를 입력해주세요"/></div>
-        <div class="btn_box">
-            <button type="button">저장</button>
-            <button type="button">리스트로 가기</button>
-        </div>
+    <form method="POST" th:object="${BUYER}">
+        <fieldset>
+            <legend>고객정보 등록</legend>
+            <div>
+                <label>USER ID</label>
+                <input th:field="*{userid}"/>
+            </div>
+            <div>
+                <label>이름</label>
+                <input th:field="*{name}"/>
+            </div>
+            <div>
+                <label>전화번호</label>
+                <input th:field="*{tel}"/>
+            </div>
+            <div>
+                <label>주소</label>
+                <input th:field="*{addr}"/>
+            </div>
+            <div>
+                <label>담당자명</label>
+                <input th:field="*{manager}"/>
+            </div>
+            <div>
+                <label>담장자 연락처</label>
+                <input th:field="*{man_tel}"/>
+            </div>
+            <div class="btn_box">
+                <button type="button" class="btn_save">저장</button>
+                <button type="button" class="btn_list">리스트로 가기</button>
+            </div>
+        </fieldset>
     </form>
 </section>
 </html>

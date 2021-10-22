@@ -1,4 +1,4 @@
-section.buyer_detail {
+section.buyer_detail ,section.order_detail{
     width:80vw;
     margin:10px auto;
     display:flex;
@@ -7,7 +7,7 @@ section.buyer_detail {
 
 }
 
-section.buyer_detail div {
+section.buyer_detail div,section.order_detail div {
     display:flex;
     flex-wrap:wrap;
 
@@ -21,40 +21,20 @@ section.buyer_detail div {
 }
 
 section.buyer_detail label,
-section.buyer_detail span {
+section.buyer_detail span,section.order_detail label,section.order_detail span {
     padding:0.5rem;
     margin:0;
     border:1px solid #ddd;
 }
 
-section.buyer_detail label {
+section.buyer_detail label ,section.order_detail label{
     width:30%;
     background-color:#eee;
 }
 
-section.buyer_detail span {
+section.buyer_detail span ,section.order_detail span{
     width:55%;
 }
 
-button {
-    display:inline-block;
-    padding:10px 15px;
-    border:none;
-    outline:none;
-    margin:0px 5px;
-    border-radius:5px;
-}
-
-button:hover {
-    box-shadow : 2px 2px 2px rgba(0,0,0,0.6);
-}
-section.buyer_detail button:nth-of-type(1) {
-    background-color:blue;
-    color:white;
-}
-section.buyer_detail button:nth-of-type(2) {
-    background-color:red;
-    color:white;
-}
 
 

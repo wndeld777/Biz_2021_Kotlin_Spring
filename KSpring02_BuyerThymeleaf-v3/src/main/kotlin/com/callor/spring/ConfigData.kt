@@ -39,5 +39,6 @@ class ConfigData {
                 buy_total = 10000
             )
         )
+
     }
 }
