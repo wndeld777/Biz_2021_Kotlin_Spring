@@ -1,0 +1,35 @@
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{/layout}"
+>
+<section layout:fragment="content" class="order_detail">
+    <script th:inline="javascript">
+        /*
+            javascript 코드에서 thymeleaf template 변수를 사용하기 위해서는
+            html 에서 해당 값을 js 변수로 다시 변환 시켜줘야 한다
+            // var rootPath = ${context.request.pageRequest}
+
+            이 변환 작업을 하기 위해서는 script 에
+            th:inline="javascript" 속성을 추가한다
+        */
+        const seq = /*[[ ${SALE.seq} ]]*/ null
+    </script>
+    <div>
+        <label>SEQ</label><span  th:text="${SALE.seq}">1</span>
+        <label >USER ID</label><span th:text="${SALE.userid}">B0001</span>
+    </div>
+    <div>
+        <label>상품명</label><span  th:text="${SALE.pname}">홍길동</span>
+        <label>단가</label><span  th:text="${SALE.amt}">02-111</span>
+    </div>
+    <div>
+        <label>수량</label><span  th:text="${SALE.qty}">서울시</span>
+        <label>합계</label><span  th:text="${SALE.total}">02-111</span>
+    </div>
+    <div>
+        <button class="btn_update">고객정보 수정</button>
+        <button class="btn_delete btn_warring">고객정보 삭제</button>
+        <button type="button" class="btn_list">리스트로 가기</button>
+    </div>
+</section>
+
