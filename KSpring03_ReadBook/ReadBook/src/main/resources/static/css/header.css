@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding:0;
+}
+header{
+    margin: 5px;
+    background-color: #aaa;
+    text-align: center;
+    padding:20px;
+    border-radius: 15px;
+}
+section{
+    display:inline-block;
+    margin: 0 auto;
+    width: 90%;
+}
+div{
+    width:100%;
+    margin:10px;
+}
+div.head,div.body{
+    display: flex;
+    margin: auto;
+}
+
+input{
+    padding:1rem;
+    width: 100%;
+    margin:auto;
+}
