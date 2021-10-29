@@ -7,7 +7,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "tbl_book" , schema = "naraDB")
-data class Book {
+class Book {
     @Id
     @Column(columnDefinition = "CHAR(4)",
         nullable = false, // not null

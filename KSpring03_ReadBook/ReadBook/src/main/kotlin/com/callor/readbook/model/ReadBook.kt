@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "tbl_readbook", schema = "naradb")
-data class ReadBook {
+class ReadBook {
 
     @Id
     @Column(columnDefinition = "BIGINT")
